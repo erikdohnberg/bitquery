@@ -3,6 +3,7 @@ Bitquery::Application.routes.draw do
   root :to => "tweets#index"
   resources :tweets
   resources :users, except: [:index]
+  resources :instructors
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'signout', to: 'sessions#destroy', as: 'signout'
 

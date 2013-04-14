@@ -11,19 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130413230726) do
+ActiveRecord::Schema.define(:version => 20130414034427) do
 
-  create_table "queries", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "tweets", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "users", :force => true do |t|
+  create_table "instructors", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "thandle"
@@ -35,6 +25,24 @@ ActiveRecord::Schema.define(:version => 20130413230726) do
     t.datetime "remember_me_token_expires_at"
   end
 
-  add_index "users", ["remember_me_token"], :name => "index_users_on_remember_me_token"
+  add_index "instructors", ["remember_me_token"], :name => "index_users_on_remember_me_token"
+
+  create_table "tweets", :force => true do |t|
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "content"
+    t.string   "screen_name"
+    t.string   "tweet_id"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.string   "oauth_token"
+    t.string   "oauth_secret"
+  end
 
 end

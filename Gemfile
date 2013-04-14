@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'sorcery'
 gem 'omniauth-twitter'
+gem 'twitter'
 
 
 # Bundle edge Rails instead:

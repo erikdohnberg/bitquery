@@ -1,6 +1,5 @@
 <div class="logo">
 	<h1>BitQuery</h1>
-
 	<div class="login">
 		<% if current_user %>
 			Signed in as <%= current_user.name %>
@@ -10,4 +9,13 @@
 		<% end %>
 	</div>
 
+	<div id="queries">
+		# This is where we should take user input for the hashtag seach
+		<% cache "queries#{Date.today}" do %>
+			<% Tweet.order("tweet_id desc").limit(3).each do |query| %>
+				  <blockquote><%= query.content %></blockquote>
+			  <div class="from">&mdash; @<%= query.screen_name %></div>
+			<% end %>
+		<% end %>
+	</div>
 </div>
