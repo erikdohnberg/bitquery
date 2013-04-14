@@ -1,7 +1,11 @@
 Bitquery::Application.routes.draw do
 
-
+  root :to => "tweets#index"
+  resources :tweets
   resources :users, except: [:index]
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

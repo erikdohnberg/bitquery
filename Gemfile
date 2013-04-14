@@ -3,8 +3,10 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 
 # Gems for hackathon
+gem 'pg'
 gem 'sorcery'
-gem 'oauth'
+gem 'omniauth-twitter'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
