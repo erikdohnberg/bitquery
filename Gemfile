@@ -7,6 +7,7 @@ gem 'pg'
 gem 'sorcery'
 gem 'omniauth-twitter'
 gem 'twitter'
+gem 'figaro'
 
 
 # Bundle edge Rails instead:

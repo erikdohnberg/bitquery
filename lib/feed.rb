@@ -1,13 +1,15 @@
+require 'rubygems'
+require 'oauth'
+require 'json'
+
 class Feed
 
-def self.get_tweets
+  def self.get_tweets(ht2)
 
     @ht1 = 'bithack'
-    @ht2 = 'helloworld'
+    #Make  @ht2 whatever the user input is
 
-    require 'rubygems'
-    require 'oauth'
-    require 'json'
+    #@ht2 = 'helloworld'
 
     # Now you will fetch /1.1/statuses/user_timeline.json,
     # returns a list of public Tweets from the specified
@@ -19,7 +21,7 @@ def self.get_tweets
     #     "text" => "motivation",
     #     "count" => 10,
     # )
-    address = URI("https://search.twitter.com/search.json?q=%23#{@ht2}&rpp=20&include_entities=true&result_type=mixed")
+    address = URI("https://search.twitter.com/search.json?q=%23#{ht2}&rpp=20&include_entities=true&result_type=mixed")
     # address = URI("#{baseurl}#{path}?#{query}")
     request = Net::HTTP::Get.new address.request_uri 
 
