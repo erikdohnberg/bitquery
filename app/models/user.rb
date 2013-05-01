@@ -7,11 +7,11 @@ class User < ActiveRecord::Base
       user
     end
 
-  def self.create_from_omniauth(auth)
-  	create! do |user|
-  		user.provider = auth["provider"]
-  		user.uid = auth["uid"]
-  		user.name = auth["info"]["name"]
+  def self.create_with_omniauth(auth)
+    create! do |user|
+      user.provider = auth["provider"]
+      user.uid = auth["uid"]
+      user.name = auth["info"]["nickname"]
     end
   end
 
@@ -19,5 +19,9 @@ class User < ActiveRecord::Base
     if provider == "twitter"
       @twitter ||= Twitter::Client.new(oauth_token: oauth_token, oauth_token_secret: oauth_secret)
     end
+  end
+
+  def avatar(omniauth)
+    self.picture = omniauth['info']['image'] 
   end
 end

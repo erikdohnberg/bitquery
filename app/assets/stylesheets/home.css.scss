@@ -1,0 +1,132 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+	margin: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+html {
+	background-color: #EEE;
+
+}
+
+a {
+	text-decoration: none;
+	color: #EEE;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #F25A31;
+}
+
+.question:hover {
+	color: #EEE;
+	text-decoration: underline;
+}
+
+.logo {
+	/*text-align: center;*/
+	color: #EEE;
+	min-width: 540px;
+}
+
+.question {
+	float: left;
+	padding-top: 20px;
+	line-height: 12px;
+	background: #F25A31;
+	text-transform: uppercase;
+	text-shadow: none;
+	padding: 8px 14px;
+	letter-spacing: 1px;
+	font-weight: 400;
+	border-radius: 4px;
+	border: none;
+	margin-top:16px;
+}
+
+.title {
+	width: 150px;
+	margin: 0 auto;
+	padding: 8px 0;
+	padding-bottom: 12px;
+}
+
+.login {
+	float: right;
+	text-align: right;
+	padding-top: 20px;
+}
+
+.login bit {
+	color: #F25A31;
+}
+
+.container-fluid {
+	background-color: #EEE;
+	padding-top: 16px;
+}
+
+.tweet-container {
+	border: 1px solid black;
+	background-color: #EEE;
+	padding: 0 15px;
+	background: #e5e5e5; /* Old browsers */
+	background: -moz-linear-gradient(top, #f3f3f3 0%, #f9f9f9 25%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(25%,#f9f9f9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* IE10+ */
+	background: linear-gradient(to bottom, #f3f3f3 0%,#f9f9f9 25%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+
+	min-width: 415px;
+
+	width: 983px;
+	height: 100%;
+	border: 0px;
+	border-radius: 3px;
+	margin-top:15px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: inset 0px 0px 2px #FFF, 0px 0px 4px rgba(0,0,0,0.15);
+}
+
+.hashtag-container {
+	border: 1px solid black;
+	background-color: #EEE;
+	padding: 0 8px;
+	background: #e5e5e5; /* Old browsers */
+	background: -moz-linear-gradient(top, #f3f3f3 0%, #f9f9f9 25%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(25%,#f9f9f9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* IE10+ */
+	background: linear-gradient(to bottom, #f3f3f3 0%,#f9f9f9 25%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+
+	min-width: 132px;
+
+	width: 983px;
+	height: 100%;
+	border: 0px;
+	border-radius: 3px;
+	margin-top:15px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: inset 0px 0px 2px #FFF, 0px 0px 4px rgba(0,0,0,0.15);
+}
+
+.hashtag-title {
+	text-align: center;
+}
+
+.bit {
+	color: #00a9e7;
+}
+
+.clear {
+	clear: both;
+}

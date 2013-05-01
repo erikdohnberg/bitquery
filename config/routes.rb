@@ -5,6 +5,7 @@ Bitquery::Application.routes.draw do
   resources :users, except: [:index]
   resources :instructors
   match 'auth/:provider/callback', to: 'sessions#create'
+  match 'auth/failure', to: redirect('/'), notice: "Cannot tweet without Twitter account"
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
 
