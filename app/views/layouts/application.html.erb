@@ -11,7 +11,7 @@
 <div class="navbar ">
   <div class="navbar-inner">
     <div class="logo">
-      <a href= <%= new_tweet_path %> class = "question">+ New Question</a>
+      <a href= <%= new_tweet_path %> class = "question"><span id="plus">+</span> New Question</a>
         <div class="login">
           <% if current_user %>
             Signed in as <span class='bit'><%= current_user.name %></span> <%= link_to "Sign out", signout_path %>
@@ -19,7 +19,7 @@
             <%= link_to "Sign in with Twitter", "/auth/twitter" %>
           <% end %>
         </div>
-      <h1 class = "title"><span class = "bit">Bit</span>Query</h1>
+      <h1 class = "title"><a href="/"><span class = "bit">Bit</span>Query</a></h1>
    </div>
   </div>
 </div>

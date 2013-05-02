@@ -1,13 +1,13 @@
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="span10 tweet-container">
+		<div class="span9 tweet-container">
 		  <h3 class = "feed-title">Queries Feed</h3>
         <% @tweets.each do |tweet_hash|%>
-        	<%= tweet_hash['text'] %><br><br>
+        	<%= tweet_hash['text'] %><br>
 		  	<% end %>
 			<div class="clear"></div>
 		</div>
-		<div class="span2 hashtag-container">
+		<div class="span3 hashtag-container">
 		  <h3 class = "hashtag-title">#Hashtags</h3>
 		  <p>#coding</p>
 		  <p>#help:Will</p>

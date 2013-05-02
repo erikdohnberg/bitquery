@@ -1,25 +1,8 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-* {
-	margin: 0;
-	font-family: 'Roboto Condensed', sans-serif;
-}
 
-html {
-	background-color: #EEE;
-}
-
-a {
-	text-decoration: none;
-	color: #EEE;
-}
-
-a:hover {
-	text-decoration: none;
-	color: #F25A31;
-}
-
+// Top navigation bar styling
 .navbar {
   *position: fixed;
   *z-index: 2;
@@ -39,17 +22,12 @@ a:hover {
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 }
 
-.question:hover {
-	color: #EEE;
-	text-decoration: underline;
-}
-
 .logo {
-	/*text-align: center;*/
 	color: #EEE;
-	min-width: 540px;
+	min-width: 714px;
 }
 
+// New Query button
 .question {
 	float: left;
 	padding-top: 20px;
@@ -65,6 +43,16 @@ a:hover {
 	margin-top:16px;
 }
 
+.question #plus {
+  font-size: 15pt;
+}
+
+.question:hover {
+  color: #EEE;
+  text-decoration: underline;
+}
+
+// Main Title styling
 .title {
 	width: 150px;
 	margin: 0 auto;
@@ -72,77 +60,86 @@ a:hover {
 	padding-bottom: 12px;
 }
 
+.title a:hover {
+  color: #EEE;
+}
+
+.bit {
+  color: #00a9e7;
+}
+
+// Rough Login Styling -- REDO THIS LATER
 .login {
-	float: right;
-	text-align: right;
-	padding-top: 20px;
-}
-
-.login bit {
-	color: #F25A31;
-}
-
-.container-fluid {
-	background-color: #EEE;
-	padding-top: 16px;
-}
-
-.tweet-container {
-	border: 1px solid black;
-	background-color: #EEE;
-	padding: 0 15px;
-	background: #e5e5e5; /* Old browsers */
-	background: -moz-linear-gradient(top, #f3f3f3 0%, #f9f9f9 25%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(25%,#f9f9f9)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* IE10+ */
-	background: linear-gradient(to bottom, #f3f3f3 0%,#f9f9f9 25%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
-
-	min-width: 415px;
-
-	width: 983px;
-	height: 100%;
-	border: 0px;
-	border-radius: 3px;
-	margin-top:15px;
-	margin-left: auto;
-	margin-right: auto;
-	box-shadow: inset 0px 0px 2px #FFF, 0px 0px 4px rgba(0,0,0,0.15);
-}
-
-.hashtag-container {
-	border: 1px solid black;
-	background-color: #EEE;
-	padding: 0 8px;
-	background: #e5e5e5; /* Old browsers */
-	background: -moz-linear-gradient(top, #f3f3f3 0%, #f9f9f9 25%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(25%,#f9f9f9)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* IE10+ */
-	background: linear-gradient(to bottom, #f3f3f3 0%,#f9f9f9 25%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
-
-	min-width: 132px;
-
-	width: 983px;
-	height: 100%;
-	border: 0px;
-	border-radius: 3px;
-	margin-top:15px;
-	margin-left: auto;
-	margin-right: auto;
-	box-shadow: inset 0px 0px 2px #FFF, 0px 0px 4px rgba(0,0,0,0.15);
+  float: right;
+  text-align: right;
+  padding-top: 20px;
 }
 
 .hashtag-title {
 	text-align: center;
 }
 
-.bit {
-	color: #00a9e7;
+#char-count {
+  color: #a3a3a3;
+  float: right;
+  text-align: right;
+  margin-right: 1px;
+}
+// Stuff for blocking site sections
+  // Some of this was taken from Bootstrap for simplicity
+
+.container-fluid {
+  background-color: #EEE;
+  padding-top: 16px;
+}
+
+.tweet-container {
+  border: 1px solid black;
+  background-color: #EEE;
+  padding: 0 15px;
+  padding-bottom: 15px;
+  background: #e5e5e5; /* Old browsers */
+  background: -moz-linear-gradient(top, #f3f3f3 0%, #f9f9f9 25%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(25%,#f9f9f9)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* IE10+ */
+  background: linear-gradient(to bottom, #f3f3f3 0%,#f9f9f9 25%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+
+  min-width: 502px;
+
+  width: 983px;
+  height: 100%;
+  border: 0px;
+  border-radius: 3px;
+  margin:15px auto;
+  box-shadow: inset 0px 0px 2px #FFF, 0px 0px 4px rgba(0,0,0,0.15);
+}
+
+.hashtag-container {
+  border: 1px solid black;
+  background-color: #EEE;
+  padding: 0 15px;
+  background: #e5e5e5; /* Old browsers */
+  background: -moz-linear-gradient(top, #f3f3f3 0%, #f9f9f9 25%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(25%,#f9f9f9)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f3f3f3 0%,#f9f9f9 25%); /* IE10+ */
+  background: linear-gradient(to bottom, #f3f3f3 0%,#f9f9f9 25%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+
+  min-width: 157px;
+
+  width: 983px;
+  height: 100%;
+  border: 0px;
+  border-radius: 3px;
+  margin-top:15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: inset 0px 0px 2px #FFF, 0px 0px 4px rgba(0,0,0,0.15);
 }
 
 .container-fluid {
@@ -153,6 +150,7 @@ a:hover {
 
 .row-fluid {
   width: 100%;
+  min-width: 714px;
   *zoom: 1;
 }
 
@@ -206,4 +204,48 @@ a:hover {
 
 .clear {
 	clear: both;
+}
+
+// Document styling
+* {
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+html {
+  background-color: #EEE;
+}
+
+a {
+  text-decoration: none;
+  color: #EEE;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #F25A31;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 31px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 17px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11px;
 }

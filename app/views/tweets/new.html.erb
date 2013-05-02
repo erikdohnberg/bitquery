@@ -1,5 +1,8 @@
-<h3>Tweet your question!</h3>
-<%= form_for (@tweet) do |tweet_form| %>
-  <%= tweet_form.text_field :content, placeholder: "Don't forget the lesson hashtag! eg. #regex", class: "input-block-level" %>
-  <%= tweet_form.submit 'Submit Tweet', class: 'btn btn-primary' %>
-<% end %>
+<div class = "span10 tweet-container">
+  <h3>Tweet your question!</h3>
+  <%= form_for (@tweet) do |tweet_form| %>
+    <%= tweet_form.text_field :content, maxlength: 140, placeholder: "Don't forget the lesson hashtag! eg. #regex", class: "input-block-level" %>
+    <span id="char-count">140</span>
+    <%= tweet_form.submit 'Submit Tweet', class: 'btn btn-primary' %>
+  <% end %>
+</div>

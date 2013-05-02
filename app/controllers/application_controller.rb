@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def twitter
-    @twitter = Twitter::Client.new
+    @twitter = Twitter::Client.new(oauth_token: oauth_token, oauth_token_secret: oauth_secret)
   end
 
   def current_user
