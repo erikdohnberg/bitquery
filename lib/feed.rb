@@ -4,10 +4,10 @@ require 'json'
 
 class Feed
 
-  def self.get_tweets(ht2)
+  def self.get_tweets(tweet_input)
 
     @ht1 = 'bithack'
-    #Make  @ht2 whatever the user input is
+    #Make  @tweet_input whatever the user input is
 
     #@ht2 = 'helloworld'
 
@@ -21,7 +21,7 @@ class Feed
     #     "text" => "motivation",
     #     "count" => 10,
     # )
-    address = URI("https://search.twitter.com/search.json?q=%23#{ht2}&rpp=20&include_entities=true&result_type=mixed")
+    address = URI("https://search.twitter.com/search.json?q=%23#{tweet_input}&rpp=20&include_entities=true&result_type=mixed")
     # address = URI("#{baseurl}#{path}?#{query}")
     request = Net::HTTP::Get.new address.request_uri 
 
