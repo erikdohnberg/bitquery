@@ -11,10 +11,13 @@
 }
 
 .navbar-inner {
-  min-height: 40px;
+  border-radius: 0;
+  border-color: #2d2d2d;
+  height: 50px;
   padding-right: 20px;
   padding-left: 20px;
   background-color: #2d2d2d;
+  background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
   *zoom: 1;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
@@ -25,12 +28,13 @@
 .logo {
 	color: #EEE;
 	min-width: 714px;
+  padding-top: 4px;
 }
 
 // New Query button
 .question {
 	float: left;
-	padding-top: 20px;
+	padding-top: 10px;
 	line-height: 12px;
 	background: #F25A31;
 	text-transform: uppercase;
@@ -40,11 +44,17 @@
 	font-weight: 400;
 	border-radius: 4px;
 	border: none;
-	margin-top:16px;
+	margin-top:10px;
+  font-size: 10pt;
+  color: #EEE;
+}
+
+.question a {
+  color: #EEE;
 }
 
 .question #plus {
-  font-size: 15pt;
+  font-size: 13pt;
 }
 
 .question:hover {
@@ -52,16 +62,20 @@
   text-decoration: underline;
 }
 
+
 // Main Title styling
 .title {
 	width: 150px;
 	margin: 0 auto;
-	padding: 8px 0;
-	padding-bottom: 12px;
+}
+
+.title a {
+  color: #EEE;
 }
 
 .title a:hover {
   color: #EEE;
+  text-decoration: none;
 }
 
 .bit {
@@ -72,11 +86,9 @@
 .login {
   float: right;
   text-align: right;
-  padding-top: 20px;
-}
-
-.hashtag-title {
-	text-align: center;
+  padding-top: 16px;
+  color: #EEE;
+  font-size: 11pt;
 }
 
 #char-count {
@@ -85,19 +97,37 @@
   text-align: right;
   margin-right: 1px;
 }
-// Stuff for blocking site sections
-  // Some of this was taken from Bootstrap for simplicity
+// Stuff for blocking site sections and setting defaults
+
+a {
+  color: #00a9e7;
+}
+
+a:hover {
+  color: #F25A31;
+  text-decoration: none;
+}
+
+.html {
+  background-color: #EEE;
+}
+
+.body {
+  background-color: #EEE;
+}
 
 .container-fluid {
   background-color: #EEE;
-  padding-top: 16px;
+  padding: 12px 20px;
 }
 
 .tweet-container {
   border: 1px solid black;
   background-color: #EEE;
-  padding: 0 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 15px;
+  padding-top: 5px;
   background: #e5e5e5; /* Old browsers */
   background: -moz-linear-gradient(top, #f3f3f3 0%, #f9f9f9 25%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(25%,#f9f9f9)); /* Chrome,Safari4+ */
@@ -108,19 +138,22 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
 
   min-width: 502px;
+  float: left;
 
-  width: 983px;
+
   height: 100%;
   border: 0px;
   border-radius: 3px;
-  margin:15px auto;
   box-shadow: inset 0px 0px 2px #FFF, 0px 0px 4px rgba(0,0,0,0.15);
 }
 
 .hashtag-container {
   border: 1px solid black;
   background-color: #EEE;
-  padding: 0 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-top: 5px;
   background: #e5e5e5; /* Old browsers */
   background: -moz-linear-gradient(top, #f3f3f3 0%, #f9f9f9 25%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(25%,#f9f9f9)); /* Chrome,Safari4+ */
@@ -131,121 +164,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
 
   min-width: 157px;
+  float: right;
 
   width: 983px;
   height: 100%;
   border: 0px;
   border-radius: 3px;
-  margin-top:15px;
-  margin-left: auto;
-  margin-right: auto;
   box-shadow: inset 0px 0px 2px #FFF, 0px 0px 4px rgba(0,0,0,0.15);
-}
-
-.container-fluid {
-  padding-right: 20px;
-  padding-left: 20px;
-  *zoom: 1;
-}
-
-.row-fluid {
-  width: 100%;
-  min-width: 714px;
-  *zoom: 1;
-}
-
-.span12 {
-  width: 940px;
-}
-
-.span11 {
-  width: 860px;
-}
-
-.span10 {
-  width: 780px;
-}
-
-.span9 {
-  width: 700px;
-}
-
-.span8 {
-  width: 620px;
-}
-
-.span7 {
-  width: 540px;
-}
-
-.span6 {
-  width: 460px;
-}
-
-.span5 {
-  width: 380px;
-}
-
-.span4 {
-  width: 300px;
-}
-
-.span3 {
-  width: 220px;
-}
-
-.span2 {
-  width: 140px;
-}
-
-.span1 {
-  width: 60px;
-}
-
-.clear {
-	clear: both;
-}
-
-// Document styling
-* {
-  margin: 0;
-  font-family: 'Roboto Condensed', sans-serif;
-}
-
-html {
-  background-color: #EEE;
-}
-
-a {
-  text-decoration: none;
-  color: #EEE;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #F25A31;
-}
-
-h1 {
-  font-size: 38px;
-}
-
-h2 {
-  font-size: 31px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 17px;
-}
-
-h5 {
-  font-size: 14px;
-}
-
-h6 {
-  font-size: 11px;
 }
