@@ -108,12 +108,21 @@ a:hover {
   text-decoration: none;
 }
 
-.html {
-  background-color: #EEE;
+.modal-footer {
+  margin-top: 20px;
+  height: 30px;
 }
 
-.body {
-  background-color: #EEE;
+#tweet_content {
+  margin-bottom: 0;
+}
+
+.new_tweet {
+  margin-bottom: 0;
+}
+
+.modal-body {
+  height: 110px;
 }
 
 .container-fluid {
@@ -139,7 +148,6 @@ a:hover {
 
   min-width: 502px;
   float: left;
-
 
   height: 100%;
   border: 0px;

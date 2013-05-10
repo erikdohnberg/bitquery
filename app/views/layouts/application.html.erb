@@ -10,8 +10,7 @@
   <body>
     <div class="navbar ">
       <div class="navbar-inner">
-<!--         <a href="#myModal"data-toggle="modal"> -->
-        <a href= <%= new_tweet_path %> class="question" data-toggle="modal"><span id="plus">+</span> New Question</a>
+        <a href="#tweetModal" class="question" data-toggle="modal"><span id="plus">+</span> New Question</a>
         <div class="login">
           <% if current_user %>
             Signed in as <span class='bit'><%= current_user.name %></span> <%= link_to "Sign out", signout_path %>
@@ -27,6 +26,26 @@
 
     <%= yield %>
 
-    
+    <div id="tweetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="tweetModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 id="tweetModalLabel">Tweet your question!</h3>
+      </div>
+      <div class="modal-body">
+        <%= form_for (@tweet) do |tweet_form| %>
+        <%= tweet_form.text_field :content, maxlength: 140, placeholder: "Don't forget the lesson hashtag! eg. #regex", class: "input-block-level" %>
+        <p>
+          <span id="char-count">140</span>
+        </p>
+        <div class="modal-footer">
+          <p>
+            <span data-dismiss="modal" class="btn">Close</span>
+            <%= tweet_form.submit 'Submit Tweet', class: 'btn btn-primary' %>
+          </p>
+        </div>
+          <% end %>
+      </div>
+    </div>
+   
   </body>
 </html>

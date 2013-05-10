@@ -11,3 +11,8 @@
  *= require 'bootstrap'
  *= require 'home'
  */
+
+ /* For some reason my HTML background would not change. This is a TEMPORARY fix. */
+ html {
+  background-color: #EEE;
+ }

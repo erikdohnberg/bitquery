@@ -1,21 +1,22 @@
-<a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
-
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3 id="myModalLabel">Tweet your question!</h3>
-  </div>
-  <div class="modal-body">
-    <div class = "span4 tweet-container">
+<% content_for :tweet_modal do %>
+  <div id="tweetModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="tweetModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h3 id="tweetModalLabel">Tweet your question!</h3>
+    </div>
+    <div class="modal-body">
       <%= form_for (@tweet) do |tweet_form| %>
-        <%= tweet_form.text_field :content, maxlength: 140, placeholder: "Don't forget the lesson hashtag! eg. #regex", class: "input-block-level" %>
-        <span id="char-count">140</span>
-        <br>
-        <div class="modal-footer">
+      <%= tweet_form.text_field :content, maxlength: 140, placeholder: "Don't forget the lesson hashtag! eg. #regex", class: "input-block-level" %>
+      <div class="modal-footer">
+        <p>
+          <span id="char-count">140</span>
+        </p>
+        <p>
           <a href="#" class="btn">Close</a>
           <%= tweet_form.submit 'Submit Tweet', class: 'btn btn-primary' %>
-        </div>
-      <% end %>
+        </p>
+      </div>
+        <% end %>
     </div>
   </div>
-</div>
+<% end %>
