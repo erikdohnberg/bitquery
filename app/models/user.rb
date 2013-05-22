@@ -20,8 +20,4 @@ class User < ActiveRecord::Base
       @twitter ||= Twitter::Client.new(oauth_token: oauth_token, oauth_token_secret: oauth_secret)
     end
   end
-
-  def avatar(omniauth)
-    self.picture = omniauth['info']['image'] 
-  end
 end
