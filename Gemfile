@@ -8,6 +8,7 @@ gem 'sorcery'
 gem 'omniauth-twitter'
 gem 'twitter'
 gem 'figaro'
+gem 'pry-rails'
 
 
 # Bundle edge Rails instead:
