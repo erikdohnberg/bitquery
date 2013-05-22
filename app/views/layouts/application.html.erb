@@ -10,9 +10,10 @@
   <body>
     <div class="navbar ">
       <div class="navbar-inner">
-        <a href="#tweetModal" class="question" data-toggle="modal"><span id="plus">+</span> New Question</a>
+        <a href="#tweetModal" class="question" data-toggle="modal"><span id="plus">+</span> NEW QUESTION</a>
         <div class="login">
           <% if current_user %>
+        
             Signed in as <span class='bit'><%= current_user.name %></span> <%= link_to "Sign out", signout_path %>
           <% else %>
             <%= link_to "Sign in with Twitter", "/auth/twitter" %>
@@ -40,7 +41,7 @@
         <div class="modal-footer">
           <p>
             <span data-dismiss="modal" class="btn">Close</span>
-            <%= tweet_form.submit 'Submit Tweet', class: 'btn btn-primary' %>
+            <%= tweet_form.submit 'Submit Tweet', class: 'question' %>
           </p>
         </div>
           <% end %>
