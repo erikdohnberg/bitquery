@@ -3,16 +3,18 @@
 		<div class="span9 tweet-container">
 		  <h3 class = "feed-title">Queries Feed</h3>
         <% @tweets.each do |tweet_hash|%>
+        	<%= tweet_hash['default_profile_image'] %>
+        	<%= tweet_hash['name'] %> asks:<br>
         	<%= tweet_hash['text'] %><br>
 		  	<% end %>
 			<div class="clear"></div>
 		</div>
 		<div class="span3 hashtag-container">
 		  <h3 class = "hashtag-title">#Hashtags</h3>
-		  <p>#coding</p>
-		  <p>#help:Will</p>
-		  <p>#help:Rob</p>
-		  <p>#maintenance</p>
+		  <h5>#coding</h5>
+		  <h5>#help:Will</h5>
+		  <h5>#help:Rob</h5>
+		  <h5>#maintenance</h5>
 		</div>
 	</div>
 </div>
