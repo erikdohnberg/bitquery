@@ -14,7 +14,7 @@ class Feed
     # Now you will fetch /1.1/statuses/user_timeline.json,
     # returns a list of public Tweets from the specified
     # account.
-    address = URI("https://stream.twitter.com/search.json?q=%23#{@ht2}&rpp=20&include_entities=true&result_type=mixed")
+    address = URI("https://search.twitter.com/search.json?q=%23#{@ht2}&rpp=20&include_entities=true&result_type=mixed")
     # address = URI("#{baseurl}#{path}?#{query}")
     request = Net::HTTP::Get.new address.request_uri 
 
